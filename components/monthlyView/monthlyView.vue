@@ -32,21 +32,37 @@
                 </div>
                 <!-- Days -->
                 <div class="grid flex-grow w-full h-auto grid-cols-7 grid-rows-5 gap-px pt-px mt-1 bg-gray-200">
-                    <div class="relative flex flex-col bg-white group">
-                        <span class="mx-2 my-1 text-xs font-bold">1 September</span>
-                        <div class="flex flex-col px-1 py-1 overflow-auto">
-                            <button class="flex items-center flex-shrink-0 h-5 px-1 text-xs hover:bg-gray-200">
-                                <span class="flex-shrink-0 w-2 h-2 border border-gray-500 rounded-full"></span>
-                                <span class="ml-2 font-light leading-none">08:30</span>
-                                <span class="ml-2 font-medium leading-none truncate">An unconfirmed event</span>
-                            </button>
-                            <button class="flex items-center flex-shrink-0 h-5 px-1 text-xs hover:bg-gray-200">
-                                <span class="flex-shrink-0 w-2 h-2 bg-gray-500 rounded-full"></span>
-                                <span class="ml-2 font-light leading-none">14:15</span>
-                                <span class="ml-2 font-medium leading-none truncate">A confirmed event</span>
-                            </button>
-                        </div>
-                    </div>
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
+                    <DayCard />
                 </div>
             </div>
         </div>
@@ -55,7 +71,10 @@
 </template>
 
 <script>
+import DayCard from "~/components/monthlyView/dayCard.vue";
+
 export default {
-    name: "monthlyView"
+    name: "monthlyView",
+    components: {DayCard}
 }
 </script>
