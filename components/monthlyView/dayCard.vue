@@ -1,12 +1,8 @@
 <template>
-    <div class="relative flex flex-col bg-white group">
-        <span class="mx-2 my-1 text-xs font-bold">1 September</span>
-        <div class=" overflow-hidden flex flex-col px-1 py-1 overflow-auto">
-            <ItemOfDay />
-            <ItemOfDay />
-            <ItemOfDay />
-            <ItemOfDay />
-            <ItemOfDay />
+    <div class="bg-white relative flex flex-col group">
+        <span class="mx-2 mt-1 mb-3 text-xs font-bold">{{ day.name }}</span>
+        <div class="flex flex-col px-1 py-1 overflow-auto">
+            <ItemOfDay v-for="(item, index) in day.items" :key="index"/>
         </div>
     </div>
 </template>
@@ -16,7 +12,13 @@ import ItemOfDay from "~/components/monthlyView/itemOfDay.vue";
 
 export default {
     name: "dayCard",
-    components: {ItemOfDay}
+    components: {ItemOfDay},
+    props: {
+        day: {
+            type: Object,
+            require:true,
+        },
+    },
 }
 </script>
 

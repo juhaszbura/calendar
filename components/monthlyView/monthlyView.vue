@@ -1,68 +1,21 @@
 <template>
     <div class="text-gray-700">
         <!-- Component Start -->
-        <div class="flex flex-grow w-screen h-screen overflow-auto">
-
+        <div class="flex flex-grow w-full h-screen overflow-auto">
             <div class="flex flex-col flex-grow">
-                <!-- Header -->
-                <div class="flex items-center mt-4">
-                    <div class="flex ml-6">
-                        <button>
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-                        <button>
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    </div>
-                    <h2 class="ml-2 text-xl font-bold leading-none">September, 2020</h2>
-                </div>
                 <!-- Name of week days -->
                 <div class="grid grid-cols-7 mt-4">
-                    <div class="pl-1 text-sm">hétfő</div>
-                    <div class="pl-1 text-sm">kedd</div>
-                    <div class="pl-1 text-sm">szerda</div>
-                    <div class="pl-1 text-sm">csütrötök</div>
-                    <div class="pl-1 text-sm">péntek</div>
-                    <div class="pl-1 text-sm">szombat</div>
-                    <div class="pl-1 text-sm">vasárnap</div>
+                    <div class="pl-1 text-sm text-center">hétfő</div>
+                    <div class="pl-1 text-sm text-center">kedd</div>
+                    <div class="pl-1 text-sm text-center">szerda</div>
+                    <div class="pl-1 text-sm text-center">csütrötök</div>
+                    <div class="pl-1 text-sm text-center">péntek</div>
+                    <div class="pl-1 text-sm text-center">szombat</div>
+                    <div class="pl-1 text-sm text-center">vasárnap</div>
                 </div>
-                <!-- Days -->
-                <div class="grid flex-grow w-full h-auto grid-cols-7 grid-rows-5 gap-px pt-px mt-1 bg-gray-200">
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
-                    <DayCard />
+                <!-- Grid -->
+                <div class="grid flex-grow w-full h-auto grid-cols-7 grid-rows-5 gap-px pt-px mt-1 bg-gray-100">
+                    <DayCard v-for="day in days" :key="day.name" :day="day"/>
                 </div>
             </div>
         </div>
@@ -75,6 +28,231 @@ import DayCard from "~/components/monthlyView/dayCard.vue";
 
 export default {
     name: "monthlyView",
-    components: {DayCard}
+    components: {DayCard},
+    setup(){
+        const days = [
+            {
+                'name': 'November 1',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': '2',
+                'items': [
+                ]
+            },
+            {
+                'name': '3',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '4',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '5',
+                'items': [
+                ]
+            },
+            {
+                'name': '6',
+                'items': [
+
+                ]
+            },
+            {
+                'name': '7',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': 'November 1',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': '2',
+                'items': [
+                ]
+            },
+            {
+                'name': '3',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '4',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '5',
+                'items': [
+                ]
+            },
+            {
+                'name': '6',
+                'items': [
+
+                ]
+            },
+            {
+                'name': '7',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': 'November 1',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': '2',
+                'items': [
+                ]
+            },
+            {
+                'name': '3',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '4',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '5',
+                'items': [
+                ]
+            },
+            {
+                'name': '6',
+                'items': [
+
+                ]
+            },
+            {
+                'name': '7',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': 'November 1',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': '2',
+                'items': [
+                ]
+            },
+            {
+                'name': '3',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '4',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '5',
+                'items': [
+                ]
+            },
+            {
+                'name': '6',
+                'items': [
+
+                ]
+            },
+            {
+                'name': '7',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': 'November 1',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+            {
+                'name': '2',
+                'items': [
+                ]
+            },
+            {
+                'name': '3',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '4',
+                'items': [
+                    {},
+                ]
+            },
+            {
+                'name': '5',
+                'items': [
+                ]
+            },
+            {
+                'name': '6',
+                'items': [
+
+                ]
+            },
+            {
+                'name': '7',
+                'items': [
+                    {},
+                    {},
+                    {},
+                ]
+            },
+        ];
+        return {days}
+    }
 }
 </script>
